@@ -1,3 +1,112 @@
+h1, h2, h3, p, ul {
+ margin: 0;
+ padding: 0;
+}
+
+img {
+ display: block;
+ max-width: 100%;
+ height: auto;
+ margin: auto;
+}
+
+ul {
+ list-style-type: none;
+}
+
+/* end css reset */ 
+
 body {
-    background-color: rgb(252, 222, 222);
+    background: #FFC935;
+    background: linear-gradient(180deg, rgba(255, 201, 53, 1) 50%, rgba(255, 249, 208, 1) 100%);
+}
+
+header img {
+    position: absolute;
+}
+
+h1 {
+    font-family: "Bagel Fat One";
+    font-size: 48px;
+    color: #FFF9D0;
+    position: relative;
+    text-align: end; 
+    top: 36px;
+    padding: 24px;
+
+}
+
+h2 {
+    font-family: "Baloo Da 2";
+    font-size: 36px;
+    color: #FFF9D0;
+    position: relative;
+    top: 36px;
+    text-align: end;
+    padding: 0 36px;
+}
+
+main {
+    padding: 36px;
+}
+
+h3 {
+    font-family: "Baloo Bhai 2";
+    font-size: 48px;
+    color: #DD841E;
+    text-align: center;
+    padding: 24px;
+}
+
+ul li {
+    font-family: "Afacad";
+    font-size: 32px;
+    color: #DD841E;
+    text-align: center;
+}
+
+ul li a {
+    text-decoration: none; 
+    color: #DD841E;
+}
+
+h3 {
+    justify-content: center;
+}
+
+footer {
+    font-family: "Baloo Bhai 2";
+    color: #DD841E;
+    padding: 12px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #DD841E;
+}
+
+@media only screen and (min-width: 650px) {
+    
+    h1 {
+    font-size: 96px;
+    text-align: end;
+    top: 112px;
+    right: 36px;
+    }
+
+    h2 {
+    font-size: 40px;
+    text-align: end;
+    top: 112px;
+    right: 36px;
+    }
+
+    main {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative; 
+    top: 64px;
+    }
+
 }
