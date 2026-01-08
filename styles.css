@@ -16,6 +16,10 @@ ul {
 
 /* end css reset */ 
 
+/* body, html {
+    height: 100%;
+} */
+
 body {
     background: #FFC935;
     background: linear-gradient(180deg, rgba(255, 201, 53, 1) 50%, rgba(255, 249, 208, 1) 100%);
@@ -96,10 +100,14 @@ footer a {
     }
 
     h2 {
-    font-size: 40px;
+    font-size: 36px;
     text-align: end;
     top: 112px;
     right: 36px;
+    }
+
+    h3 {
+    padding-top: 12px;
     }
 
     main {
@@ -107,6 +115,10 @@ footer a {
     justify-content: space-evenly;
     position: relative; 
     top: 64px;
+    }
+
+    footer {
+        margin: 0 auto;
     }
 
 }
