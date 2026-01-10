@@ -16,13 +16,14 @@ ul {
 
 /* end css reset */ 
 
-/* body, html {
-    height: 100%;
-} */
+html {
+    min-height: 100%;
+    background: linear-gradient(180deg, rgba(255, 201, 53, 1) 50%, rgba(255, 249, 208, 1) 100%);
+    background-repeat: no-repeat;
+}
 
 body {
-    background: #FFC935;
-    background: linear-gradient(180deg, rgba(255, 201, 53, 1) 50%, rgba(255, 249, 208, 1) 100%);
+    background: transparent;
 }
 
 header img {
@@ -92,18 +93,25 @@ footer a {
 
 @media only screen and (min-width: 650px) {
     
+    body {
+    min-height: 100%;
+
+    }
+
     h1 {
     font-size: 96px;
     text-align: end;
-    top: 112px;
-    right: 36px;
+    padding: 96px 48px 0 0;
     }
 
     h2 {
     font-size: 36px;
     text-align: end;
-    top: 112px;
-    right: 36px;
+    padding: 0;
+    }
+
+    #tagline {
+        padding: 24px 48px;
     }
 
     h3 {
@@ -114,11 +122,10 @@ footer a {
     display: flex;
     justify-content: space-evenly;
     position: relative; 
-    top: 64px;
     }
 
     footer {
-        margin: 0 auto;
+    margin: auto;
     }
 
 }
