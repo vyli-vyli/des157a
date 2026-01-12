@@ -30,6 +30,24 @@ header img {
     position: absolute;
 }
 
+#honey {
+    width: 100%;
+    top: -15px;
+    animation: honeydrip 8s ease-in-out infinite; 
+}
+
+@keyframes honeydrip {
+    0% {
+        transform: translateY(-15px);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
 h1 {
     font-family: "Bagel Fat One";
     font-size: 48px;
