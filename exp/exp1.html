@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Experiments</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Open the console to see the code!</h2>
+
+    <script>
+    /* this code prints out the numbers from 1-100. if the numbers are evenly divisible by 3, the console will print out "fizz" instead of the number. if it's divisible by 5, it'll print out "buzz" */
+
+        //sequence: this whole piece of code
+
+        //loop: for loop from 1-100
+        for ( var i = 1; i < 101; i++) {
+
+            //selection: if statement 
+            if (i % 3 === 0) {
+                console.log(`Fizz`);
+            } else if (i % 5 === 0) {
+                console.log(`Buzz`);
+            } else {
+                console.log(`${i}`); 
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
