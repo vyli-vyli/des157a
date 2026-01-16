@@ -65,8 +65,8 @@ h1 {
 h2 {
     font-family: "Baloo Da 2";
     font-size: 24px;
-    color: #DD841E;
-    
+    color: #DD841E; 
+    position: static; 
 }
 
 main {
@@ -77,35 +77,23 @@ main {
 article {
     background-color: #FFF9D0; 
     padding: 20px;
+    margin: 20px;
     border-radius: 12px;
-    border: #DD841E 4px;
+    border: solid #DD841E 4px; 
 }
 
 time {
     font-family: "Baloo Bhai 2";
     font-size: 20px;
     color: #DD841E;
-    text-align: center;
+    text-align: center; 
 }
 
-ul li {
-    font-family: "Afacad";
-    font-size: 18px;
-    color: #DD841E;
-    text-align: center;
-}
-
-ul li a {
-    text-decoration: none; 
-    color: #DD841E;
-}
-
-ul li a:hover {
-    color: #f0ac00; 
-}
-
-h3 {
-    justify-content: center;
+p {
+    color: #c9781b; 
+    font-family: "Afacad"; 
+    font-size: 16px;
+    padding-top: 12px;
 }
 
 footer {
@@ -127,19 +115,9 @@ footer a {
     }
 
     h1 {
-    font-size: 96px;
+    font-size: 72px;
     text-align: end;
     padding: 96px 48px 0 0;
-    }
-
-    h2 {
-    font-size: 36px;
-    text-align: end;
-    padding: 0;
-    }
-
-    #tagline {
-        padding: 24px 48px;
     }
 
     main {
@@ -148,13 +126,14 @@ footer a {
     position: relative; 
     }
 
-    h3 {
-    font-size: 36px;
-    padding-top: 12px;
+    article {
+        max-width: 25%; 
+        margin-top: 48px;
     }
 
-    ul li {
-    font-size: 32px;
+    h2 {
+    font-size: 36px;
+    padding: 0;
     }
 
     footer {
