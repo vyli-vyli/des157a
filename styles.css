@@ -124,6 +124,7 @@ main {
     padding: 36px;
     max-width: 1200px;
     margin: auto;
+    z-index: 20;
 }
 
 h3 {
