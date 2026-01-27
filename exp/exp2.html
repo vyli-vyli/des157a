@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Experiments</title>
+
+    <!-- my styles -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <style> 
+        h1 {
+            font-family: "Lexend";
+            font-size: 80px;
+            text-align: center; 
+        }
+
+        h2 {
+            font-family: "Lexend";
+            font-size: 48px;
+            text-align: center; 
+        }
+
+        #text {
+            font-family: "Lexend";
+            font-size: 48px; 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Experiment 2</h1>
+    <h2>Guess the number! :D</h2>
+
+    <div id="text"></div>
+
+    <script>
+    /* this code prompts the user to guess a number from 0 - 10 and see if it matches the number the code generates. I was originally trying to have it do the opposite, to have the code guess the user's number, but it somehow ended up like this. */
+
+        //sequence: this whole piece of code is a sequence 
+
+        //array to make numbers to choose from 
+        var numOutput = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; 
+
+        function game() {
+            var numInput = prompt("Please input a number from 1-10.", ""); 
+
+            //for loop to run throug the array and pick a random number 
+            for (i = 0; i < numOutput.length; i++) {
+                var randomNum = Math.floor(Math.random() * numOutput.length + 1); 
+                var selectedNum = numOutput[randomNum]; 
+
+                //outputs the random number on the screen
+                document.querySelector("#text").innerHTML = `${selectedNum}`; 
+
+                //if statement to signify a "win" or a "null"
+                if (numInput == "" || numInput > 10 || numInput < 0) {
+                    document.querySelector("#text").innerHTML = "Please input a valid number from 0-10. :/"; 
+                }
+                else if (numInput == selectedNum) {
+                    document.querySelector("#text").innerHTML = "Yay! Thanks for playing! :)"; 
+                } 
+             }   
+        }
+
+        game(); 
+
+    </script>
+
+
+</body>
+</html>
