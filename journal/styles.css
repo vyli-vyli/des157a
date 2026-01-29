@@ -115,6 +115,10 @@ footer a {
     min-height: 100%;
     }
 
+    #banner {
+    max-width: 88%;
+    }
+
     h1 {
     font-size: 72px;
     text-align: end;
@@ -128,7 +132,7 @@ footer a {
     }
 
     article {
-        max-width: 25%; 
+        max-width: 30%; 
         margin-top: 48px;
     }
 
