@@ -45,9 +45,9 @@ main {
     right: 24%;
 }
 
-/* #homepage {
+#homepage {
     display: none;
-} */
+}
 
 #homepage h1 {
     font-family: "Fredoka"; 
@@ -81,6 +81,38 @@ main {
     display: block;
     margin: 24px auto 0;
 }
+
+.boxleft {
+    position: absolute;
+    top: 20%;
+    left: 24%;
+}
+
+#madlibs-questions {
+    display: none; 
+}
+
+#loadingscreen {
+    display: none;
+}
+
+.textbox {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+}
+
+/* #madlibs-form {
+    display: none; 
+} */
+
+#madlibs-form {
+    font-family: "Afacad";
+    font-size: 24px; 
+    line-height: 36px;
+}
+
+
 
 @media only screen and (min-width: 900px) {
 
