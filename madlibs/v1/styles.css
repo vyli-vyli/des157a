@@ -20,7 +20,6 @@ body {
     background-color: rgb(135, 45, 45);
     width: 100vw;
     height: 100vh;
-    display: flex;
     justify-content: center; 
 }
 
@@ -41,19 +40,20 @@ main {
 
 .boxright {
     position: absolute;
+    width: 35%;
     top: 20%;
-    right: 24%;
+    right: 13%;
 }
 
-#homepage {
+/* #homepage {
     display: none;
-}
+} */
 
 #homepage h1 {
     font-family: "Fredoka"; 
-    font-size: 48px;
+    font-size: clamp(4vw, 6vw, 8vw);
     color: #B56347; 
-    text-align: right; 
+    text-align: center; 
     margin-bottom: 12px;
 }
 
@@ -102,9 +102,9 @@ main {
     right: 15%;
 }
 
-/* #madlibs-form {
+#madlibs-form {
     display: none; 
-} */
+}
 
 #madlibs-form {
     font-family: "Afacad";
@@ -122,11 +122,11 @@ main {
     }
 
     .boxright {
-        right: 20%; 
+        right: 13%; 
     }
 
     #homepage h1 {
-        font-size: 84px;
+        /* font-size: 84px; */
     } 
 
     #homepage h2 {
