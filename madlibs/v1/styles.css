@@ -40,14 +40,14 @@ main {
 
 .boxright {
     position: absolute;
-    width: 35%;
+    width: 25%;
     top: 20%;
-    right: 13%;
+    right: 22%;
 }
 
-/* #homepage {
+#homepage {
     display: none;
-} */
+}
 
 #homepage h1 {
     font-family: "Fredoka"; 
@@ -84,12 +84,64 @@ main {
 
 .boxleft {
     position: absolute;
+    width: 25%;
     top: 20%;
-    left: 24%;
+    left: 22%;
 }
 
-#madlibs-questions {
+/* #madlibs-questions {
     display: none; 
+} */
+
+#madlibs-questions label {
+    font-family: "Afacad"; 
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#madlibs-questions input {
+    background-color: rgb(233, 233, 233); 
+    border: none;
+    border-radius: 10px;
+    width: 90px;
+    height: 20px;
+    margin-bottom: 18px;
+}
+
+.boxleft #word-three {
+    margin-left: 35px;
+}
+
+.boxleft #word-four {
+    margin-left: 50px;
+}
+
+.boxleft #word-six {
+    margin-left: 55px;
+}
+
+.boxright #word-one{
+    margin-left: 35px
+}
+
+.boxright #word-two{
+    margin-left: 45px
+}
+
+.boxright #word-three{
+    margin-left: 25px
+}
+
+.boxright #word-four{
+    margin-left: 10px
+}
+
+.boxright #word-five{
+    margin-left: 45px
+}
+
+.boxright #word-six{
+    margin-left: 10px
 }
 
 #loadingscreen {
