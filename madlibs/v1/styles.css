@@ -134,7 +134,7 @@ main {
 /* form page */
 
 #madlibs-questions {
-    display: none; 
+    /* display: none;  */
 }
 
 #madlibs-questions label {
@@ -152,39 +152,39 @@ main {
     margin-bottom: 18px;
 }
 
-.boxleft #word-three {
+#word-three {
     margin-left: 35px;
 }
 
-.boxleft #word-four {
+#word-four {
     margin-left: 50px;
 }
 
-.boxleft #word-six {
+#word-six {
     margin-left: 55px;
 }
 
-.boxright #word-one{
+#word-seven{
     margin-left: 35px
 }
 
-.boxright #word-two{
+#word-eight{
     margin-left: 45px
 }
 
-.boxright #word-three{
+#word-nine{
     margin-left: 25px
 }
 
-.boxright #word-four{
+#word-ten{
     margin-left: 10px
 }
 
-.boxright #word-five{
+#word-eleven{
     margin-left: 45px
 }
 
-.boxright #word-six{
+#word-twelve{
     margin-left: 10px
 }
 
@@ -223,7 +223,7 @@ main {
 }
 
 #madlibs-form3 {
-    /* display: none;  */
+    display: none; 
 }
 
 #madlibs-form3 h2{
