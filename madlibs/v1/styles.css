@@ -16,18 +16,21 @@ ul {
 
 /* end css reset */ 
 
+.hidden {
+    display: none;
+}
+
 body {
     background-color: rgb(135, 45, 45);
     width: 100vw;
     height: 100vh;
-    justify-content: center; 
 }
 
 main {
     max-width: 100vw; 
     max-height: 100vh;
     width: 100vw; 
-    height: 100vh;
+    height: auto;
     aspect-ratio: 16/10;
     position: relative; 
 }
@@ -42,7 +45,7 @@ main {
     position: absolute;
     width: 25%;
     top: 20%;
-    right: 22%;
+    right: 21%;
 }
 
 /* TURN PHONE SIDEWAYS OVERLAY */
@@ -87,10 +90,6 @@ main {
 
 }
 
-#homepage {
-    display: none;
-}
-
 #homepage h1 {
     font-family: "Fredoka"; 
     font-size: clamp(4vw, 6vw, 8vw);
@@ -132,10 +131,6 @@ main {
 }
 
 /* form page */
-
-#madlibs-questions {
-    /* display: none;  */
-}
 
 #madlibs-questions label {
     font-family: "Afacad"; 
@@ -188,8 +183,11 @@ main {
     margin-left: 10px
 }
 
-#loadingscreen {
-    display: none;
+#madlibs-questions input[type="submit"] {
+    background-color: #FFB4B4; 
+    color: white; 
+    font-family: "Fredoka";
+    font-size: 16px;
 }
 
 /* story pages */
@@ -208,22 +206,10 @@ main {
     line-height: 24px;
 }
 
-#madlibs-form1 {
-    display: none; 
-}
-
-#madlibs-form2 {
-    display: none; 
-}
-
 #madlibs-form1 button, #madlibs-form2 button {
     border: none; 
     background-color: transparent;
     color: #FFB4B4;
-}
-
-#madlibs-form3 {
-    display: none; 
 }
 
 #madlibs-form3 h2{
@@ -256,14 +242,18 @@ main {
         height: 100vh;
     }
 
-    .boxright {
-        right: 13%; 
+    .boxleft {
+        width: 32%;
+        top: 20%;
+        left: 12%; 
     }
 
-    #homepage h1 {
-        /* font-size: 84px; */
-    } 
-
+    .boxright {
+        width: 32%;
+        top: 20%;
+        right: 12%; 
+    }
+    
     #homepage h2 {
         font-size: 48px;
     }
@@ -273,6 +263,31 @@ main {
         padding: 12px 24px; 
         border-radius: 20px;
         margin: 96px auto 0; 
+    }
+
+    /* input page */
+
+    #madlibs-questions label {
+    font-family: "Afacad"; 
+    font-size: 36px;
+    margin-bottom: 20px;
+    }
+
+    #madlibs-questions input {
+    background-color: rgb(233, 233, 233); 
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+    margin: 10px 0;
+    }
+
+    #word-one {
+    margin-left: 35px;
+    }
+
+    #word-three {
+    margin-left: 35px;
     }
 
 }
