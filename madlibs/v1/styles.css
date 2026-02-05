@@ -105,7 +105,7 @@ main {
 
 #homepage h2 {
     font-family: "Fredoka"; 
-    font-size: 32px;
+    font-size: clamp(4vw, 5vw, 6vw);
     color: #C17961; 
     text-align: center;
 }
@@ -188,8 +188,8 @@ main {
     color: white; 
     font-family: "Fredoka";
     font-size: 16px;
-    
-
+    display: block;
+    margin: auto;
 }
 
 /* story pages */
@@ -235,6 +235,8 @@ main {
     color: white; 
     padding: 4px; 
     margin-top: 4px;
+    display: block;
+    margin: auto;
 }
 
 @media only screen and (min-width: 900px) {
@@ -245,17 +247,21 @@ main {
     }
 
     .boxleft {
-        width: 35%;
+        width: 31%;
         top: 16%;
-        left: 11%;
+        left: 15%;
         height: 500px;
     }
 
     .boxright {
-        width: 35%;
+        width: 31%;
         top: 16%;
-        right: 11%;
+        right: 15%;
         height: 500px;
+        }
+
+    #homepage h1 {
+        margin: 24px 0;
     }
     
     #homepage h2 {
@@ -273,7 +279,7 @@ main {
 
     #madlibs-questions label {
     font-family: "Afacad"; 
-    font-size: 36px;
+    font-size: 28px;
     }
 
     #madlibs-questions input {
@@ -282,7 +288,7 @@ main {
     border-radius: 20px;
     width: 180px;
     height: 40px;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
     }
 
     #word-two {
@@ -310,7 +316,7 @@ main {
     }
 
     #word-eight {
-    margin-left: 120px;
+    margin-left: 95px;
     }
 
     #word-nine {
@@ -318,7 +324,7 @@ main {
     }
 
     #word-ten {
-    margin-left: 35px;
+    margin-left: 60px;
     }
 
     #word-eleven {
@@ -326,7 +332,7 @@ main {
     }
 
     #word-twelve {
-    margin-left: 120px;
+    margin-left: 100px;
     }
 
     #madlibs-questions input[type="submit"] {
@@ -343,8 +349,8 @@ main {
     .textbox {
     top: 25%;
     height: 50%;
-    width: 35%;
-    right: 11%;
+    width: 34%;
+    right: 13%;
     }
 
     #madlibs-form1, #madlibs-form2, #madlibs-form3 {
@@ -364,15 +370,148 @@ main {
     padding: 48px 0;
     }
 
-#tagline {
+    #tagline {
     font-size: 24px;
     }
 
-#madlibs-form3 button {
+    #madlibs-form3 button {
     border-radius: 25px;
     font-size: 36px;
     padding: 12px; 
     margin-top: 12px;
+    }
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+    .boxleft {
+        width: 35%;
+        top: 18%;
+        left: 11%;
+        height: 550px; 
+    }
+
+    .boxright {
+        width: 35%;
+        top: 18%;
+        right: 11%;
+        height: 550px;
+    }
+
+    /* input page */
+
+    #madlibs-questions label {
+    font-size: 36px;
+    }
+
+    #madlibs-questions input {
+    width: 200px;
+    margin-bottom: 36px;
+    }
+
+    #madlibs-questions input[type="submit"] {
+    font-size: 28px;
+    width: 300px;
+    }
+
+    /* story pages */
+    .textbox {
+    width: 36%;
+    right: 10%;
+    }
+
+    #madlibs-form1, #madlibs-form2, #madlibs-form3 {
+    font-size: 28px; 
+    line-height: 42px;
+    }
+
+    #tagline {
+    font-size: 36px;
+    }
+
+    #madlibs-form3 button {
+    margin-top: 24px;
+    }
+
+}
+
+@media only screen and (min-width: 1500px) {
+
+
+    .boxleft {
+        width: 31%;
+        left: 15%;
+    }
+
+    .boxright {
+        width: 31%;
+        right: 15%;
+    }
+
+    /* story pages */
+    .textbox {
+    width: 32%;
+    right: 14%;
+    }
+
+    #madlibs-form1, #madlibs-form2, #madlibs-form3 {
+    font-size: 28px; 
+    line-height: 42px;
+    }
+
+    #tagline {
+    font-size: 36px;
+    }
+
+}
+
+@media only screen and (min-width: 1900px) {
+
+
+    .boxleft {
+        width: 31%;
+        left: 15%;
+        height: 700px; 
+    }
+
+    .boxright {
+        width: 31%;
+        right: 15%;
+        height: 700px;
+    }
+
+    /* input page */
+
+    #madlibs-questions label {
+    font-size: 42px;
+    }
+
+    #madlibs-questions input {
+    width: 275px;
+    height: 45px; 
+    margin-bottom: 36px;
+    border-radius: 25px;
+    }
+
+    #madlibs-questions input[type="submit"] {
+    font-size: 32px;
+    width: 325px;
+    height: 60px;
+    }
+
+    /* story pages */
+    .textbox {
+    width: 33%;
+    right: 14%;
+    }
+
+    #madlibs-form1, #madlibs-form2, #madlibs-form3 {
+    line-height: 48px;
+    }
+
+    #tagline {
+    font-size: 48px;
     }
 
 }
