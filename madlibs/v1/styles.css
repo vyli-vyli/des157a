@@ -188,11 +188,57 @@ main {
     color: white; 
     font-family: "Fredoka";
     font-size: 16px;
+    width: 175px;
+    height: 24px;
     display: block;
     margin: auto;
 }
 
 /* story pages */
+
+#madlibs-form1 img {
+    position: absolute; 
+    width: 90%;
+    top: 15%;
+    left: 8%;
+    animation: sticker 2s steps(1, end) infinite;
+}
+
+#madlibs-form2 #dog {
+    position: absolute; 
+    width: 50%;
+    top: 10%;
+    left: 15%;
+    animation: sticker 2s steps(1, end) infinite;
+}
+
+#madlibs-form2 #cat {
+    position: absolute; 
+    width: 35%;
+    top: 50%;
+    left: 50%;
+    animation: sticker 2s steps(1, end) infinite;
+}
+
+#madlibs-form3 img {
+    position: absolute; 
+    width: 85%;
+    top: 35%;
+    left: 8%; 
+    animation: sticker 2s steps(1, end) infinite;
+}
+
+@keyframes sticker {
+    0% {
+        transform: rotate(10deg); 
+    }
+    50% {
+        transform: rotate(-10deg); 
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
 
 .textbox {
     position: absolute;
@@ -416,6 +462,7 @@ main {
     }
 
     /* story pages */
+
     .textbox {
     width: 36%;
     right: 10%;
