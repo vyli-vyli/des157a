@@ -505,16 +505,16 @@ main {
 @media only screen and (min-width: 1400px) {
 
     .boxleft {
-        width: 32%;
+        width: 29%;
         top: 15%;
-        left: 16%;
+        left: 17%;
         height: 550px;
     }
 
     .boxright {
-        width: 32%;
+        width: 29%;
         top: 15%;
-        right: 16%;
+        right: 17%;
         height: 550px;
     }
 
@@ -537,8 +537,8 @@ main {
     /* story pages */
 
     .textbox {
-    width: 33%;
-    right: 14%;
+    width: 32%;
+    right: 15%;
     }
 
     #madlibs-form1, #madlibs-form2, #madlibs-form3 {
