@@ -1,0 +1,110 @@
+body {
+    display: flex;
+}
+
+main {
+    width: 30vw;
+    margin-right: 70vw;
+    padding: 24px;
+}
+
+section {
+    height: 100vh;
+}
+
+h1 {
+    font-family: "Oswald";
+    font-size: 48px;
+}
+
+.wiggle {
+    transform-origin: center;
+    animation: wiggle 1s ease; 
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(5deg);
+    }
+    40% {
+        transform: rotate(-5deg);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    80% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+p {
+    font-family: "Afacad";
+    font-size: 22px;
+}
+
+
+figure {
+    display: block;
+    width: 68vw;
+    margin-left: 32vw;
+    height: 100vh;
+    position: fixed;
+    top: 0; 
+    right: 0;
+    overflow: hidden;
+}
+
+img {
+    width: 425vh;
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1);
+    transform-origin: 0% 0%;
+}
+
+figure img {
+    transition: all 3s ease; 
+}
+
+.zoom1 {
+    transform: scale(2.5);
+    transform-origin: 0% 10%;
+}
+
+.zoom2 {
+    transform: scale(2.5);
+    transform-origin: 15% 10%;
+}
+
+.zoom3 {
+    transform: scale(1.5);
+    transform-origin: 50% 30%;
+}
+
+.zoom4 {
+    transform: scale(2.5);
+    transform-origin: 90% 35%;
+}
+
+.zoom5 {
+    transform: scale(1.5);
+    transform-origin: 100% 40%;
+}
+
+.zoom6 {
+    transform: scale(2);
+    transform-origin: 85% 90%;
+}
+
+.zoom7 {
+    transform: scale(1.5);
+    transform-origin: 25% 90%;
+}
