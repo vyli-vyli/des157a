@@ -36,10 +36,9 @@
                 H1.classList.add("wiggle"); 
             }
 
-            if (counter !== prevCounter && counter > 1) {
+            if (counter !== prevCounter && counter > 0) {
                 document.querySelector("img").className = "zoom" + counter; 
                 prevCounter = counter; 
-                console.log("counter");
             }; 
         }); 
     }); 
