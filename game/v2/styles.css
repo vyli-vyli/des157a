@@ -1,0 +1,155 @@
+h1, h2, h3, p, ul {
+ margin: 0;
+ padding: 0;
+}
+
+img {
+ display: block;
+ max-width: 100%;
+ height: auto;
+ margin: auto;
+}
+
+ul {
+ list-style-type: none;
+}
+
+/* end css reset */ 
+
+/* body {
+    background-image: ;
+} */
+
+.hidden {
+    opacity: 0; 
+    pointer-events: none;
+}
+
+.showing {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* START SCREEN  */
+
+#buttons {
+    display: flex;
+}
+
+#start .help, #start .sound {
+    border: none;
+    background-color: transparent;
+    padding: 24px;
+}
+
+#start div img {
+    max-width: 75%;
+}
+
+#start .sound {
+    margin-left: auto;
+}
+
+#start h1 {
+    font-family: "Jersey 15";
+    font-size: 96px;
+    text-align: center;
+    color: white; 
+    -webkit-text-stroke: #ED9999 15px; 
+    paint-order: stroke fill;
+}
+
+#start #startimg {
+    transform: translate(0%, 100%);
+}
+
+#start #startbutton {
+    font-family: "Silkscreen";
+    font-size: 36px;
+    border: none; 
+    border-radius: 25px;
+    background-color: #FFD5D5; 
+    color: white;
+    padding: 16px;
+    
+    display: block;
+    margin: auto;
+    margin-top: 200px;
+}
+
+#overlay {
+    background-color: rgb(200, 200, 200, 0.5);
+    width: 100vw; 
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+}
+
+#overlay aside {
+    background-color: white;
+    border: solid #FFD5D5 5px;
+    border-radius: 25px;
+    width: 75%;
+    position: absolute;
+    z-index: 10;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#overlay h2 {
+    font-family: "Jersey 15"; 
+    font-size: 36px;
+    text-align: center;
+    padding: 12px;
+}
+
+#overlay p {
+    font-family: "Afacad";
+    font-size: 20px;
+    padding: 0 24px 24px 24px;
+}
+
+.return {
+    background-color: #FFD5D5; 
+    color: white;
+    font-family: "Silkscreen";
+    font-size: 24px;
+    border: none; 
+    border-radius: 25px;
+    padding: 12px;
+    
+    display: flex; 
+    margin: auto;
+    margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    /* START SCREEN */
+    #start .help, #start .sound {
+        padding: 48px;
+    }
+
+    #start div img {
+        max-width: 100%;
+    }
+
+    #start h1 {
+        font-size: 124px;
+    }
+
+    #start #startbutton {
+        font-size: 48px;
+        padding: 20px;
+    }
+
+    #overlay aside {
+        width: 50%;
+    }
+
+    #overlay p {
+        padding: 0 36px 36px 36px; 
+    }
+
+}
