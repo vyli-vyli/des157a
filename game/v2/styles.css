@@ -21,13 +21,8 @@ ul {
 } */
 
 .hidden {
-    opacity: 0; 
+    display: none;
     pointer-events: none;
-}
-
-.showing {
-    opacity: 1;
-    pointer-events: auto;
 }
 
 /* START SCREEN  */
@@ -36,13 +31,13 @@ ul {
     display: flex;
 }
 
-#start .help, #start .sound {
+.help, .sound {
     border: none;
     background-color: transparent;
     padding: 24px;
 }
 
-#start div img {
+#buttons img {
     max-width: 75%;
 }
 
@@ -122,6 +117,33 @@ ul {
     display: flex; 
     margin: auto;
     margin-bottom: 24px;
+}
+
+/* MAIN GAME */
+
+header {
+    background-color: #FFD5D5;
+    padding: 24px;
+}
+
+#game h2 {
+    font-family: "Jersey 15";
+    font-size: 48px;
+    color: white;
+    -webkit-text-stroke: #ED9999 15px; 
+    paint-order: stroke fill;
+    text-align: center;
+}
+
+.quit {
+    font-family: "Silkscreen";
+    font-size: 24px;
+    background-color: #FFD5D5; 
+    color: white; 
+    border: none; 
+    border-radius: 10px;
+    padding: 4px 12px;
+    margin: 24px; 
 }
 
 @media only screen and (min-width: 1200px) {

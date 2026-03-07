@@ -9,15 +9,15 @@
     const back = document.querySelector(".return"); 
 
     help.addEventListener("click", function() {
-        document.querySelector("#overlay").className = "showing";
+        document.querySelector("#overlay").classList.remove("hidden");
 
         back.addEventListener("click", function() {
-            document.querySelector("#overlay").className = "hidden";
+            document.querySelector("#overlay").className = "hidden"; 
         }); 
     }); 
 
     document.querySelector("#startbutton").addEventListener("click", function() {
         document.querySelector("#start").className = "hidden"; 
-        document.querySelector("#game").className = "showing";
+        document.querySelector("#game").classList.remove("hidden");
     }); 
 }) (); 

@@ -18,27 +18,47 @@
      <script src="script.js" defer></script>
 </head>
 <body>
-    <section id="start" class="showing">
+    <section id="start">
         <div id="overlay" class="hidden">
             <aside>
                 <h2>HOW TO PLAY</h2>
                 <p>Welcome to Critter Clash!</p>
-                <p>This is a 2 player die-based game. Each player will be assigned a random critter as their avatar. Players will each start with 100 HP, and can deal damage to the other player through rolling the 2 dice on screen. The sum of the dice roll will be the amount of damage your critter deals.</p>
+                <p>This is a 2 player die-based game. Players will each start with 100 HP, and can deal damage to the other player through rolling the 2 dice on screen. The sum of the dice roll will be the amount of damage your critter deals.</p>
                 <p>If a 1 is rolled, the player's turn will be skipped. <strong>If two 1's, or snake eyes, are rolled, the opposing player's HP will be reset to 100.</strong></p>
                 <p>To win, please defeat the other player's critter first!</p>
                 <button class="return">&lt;&lt;BACK</button>
             </aside>
         </div>
+
         <div id="buttons">
             <button class="help"><img src="images/help.png" alt="help"></button>
             <button class="sound"><img src="images/sound.png" alt="sound"></button>
         </div>
+
         <h1>critter clash</h1>
         <img src="images/help.png" id="startimg" alt="title page image">
         <button id="startbutton">START</button>
     </section> 
     
     <section id="game" class="hidden">
+        <header>
+            <h2>critter clash</h2>
+        </header>
+
+        <div id="buttons">
+            <button class="help"><img src="images/help.png" alt="help"></button>
+            <button class="sound"><img src="images/sound.png" alt="sound"></button>
+            <button class="quit">QUIT?</button>
+        </div>
+
+        <div id="hp">
+            <h3>HP</h3>
+            <h3>HP</h3>
+        </div>
+
+        <div id="dice"></div>
+
+        <button id="roll">ROLL</button>
 
     </section>
     <section id="win" class="hidden">
