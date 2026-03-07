@@ -41,7 +41,7 @@ ul {
     max-width: 75%;
 }
 
-#start .sound {
+#start .sound, #win .sound {
     margin-left: auto;
 }
 
@@ -141,19 +141,61 @@ header {
     background-color: #FFD5D5; 
     color: white; 
     border: none; 
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 4px 12px;
     margin: 24px; 
+}
+
+#game #buttons {
+    justify-content: space-evenly;
+}
+
+#gamearea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Silkscreen";
+    font-size: 36px; 
+    color: #ED9999; 
+}
+
+#roll {
+    font-family: "Silkscreen";
+    font-size: 48px;
+    background-color: #FFD5D5; 
+    color: white; 
+    border: none; 
+    border-radius: 20px;
+    padding: 12px;
+    display: block;
+    margin: 24px auto;
+}
+
+/* WIN SCREEN */
+
+#again {
+    font-family: "Silkscreen";
+    font-size: 36px;
+    background-color: #FFD5D5; 
+    color: white; 
+    border: none; 
+    border-radius: 20px;
+    padding: 12px;
+    display: block;
+    margin: 24px auto;
 }
 
 @media only screen and (min-width: 1200px) {
 
     /* START SCREEN */
-    #start .help, #start .sound {
-        padding: 48px;
+    .help, .sound {
+        padding: 36px;
     }
 
-    #start div img {
+    #buttons img {
         max-width: 100%;
     }
 
@@ -174,4 +216,28 @@ header {
         padding: 0 36px 36px 36px; 
     }
 
+    /* MAIN GAME */
+    #game #buttons {
+        justify-content: left;
+    }
+
+    .quit {
+        max-height: 75px;
+        font-size: 36px; 
+        border-radius: 20px;
+        margin-top: 36px;
+        margin-right: 35px;
+        margin-left: auto;
+    }
+
+    #roll {
+        font-size: 48px;
+        padding: 20px;
+    }
+
+    /* WIN SCREEN */
+    #again {
+        font-size: 48px;
+    }
+    
 }
