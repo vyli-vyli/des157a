@@ -54,8 +54,34 @@ ul {
     paint-order: stroke fill;
 }
 
-#start #startimg {
-    transform: translate(0%, 100%);
+#startanimation {
+    display: flex;
+    margin: auto;
+}
+
+#startanimation img {
+    width: 50%;
+    padding: 24px;
+}
+
+#startdog {
+    animation: sticker 2s steps(1, end) infinite;
+}
+
+#startcat {
+    animation: sticker 2s steps(1, end) infinite;
+}
+
+@keyframes sticker {
+    0% {
+        transform: rotate(10deg); 
+    }
+    50% {
+        transform: rotate(-10deg); 
+    }
+    100% {
+        transform: rotate(10deg);
+    }
 }
 
 #start #startbutton {
@@ -69,10 +95,10 @@ ul {
     
     display: block;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 64px;
 }
 
-#overlay {
+#overlay, #sourcespage {
     background-color: rgb(200, 200, 200, 0.5);
     width: 100vw; 
     height: 100vh;
@@ -80,7 +106,7 @@ ul {
     z-index: 10;
 }
 
-#overlay aside {
+#overlay aside, #sourcespage aside {
     background-color: white;
     border: solid #FFD5D5 5px;
     border-radius: 25px;
@@ -99,13 +125,24 @@ ul {
     padding: 12px;
 }
 
-#overlay p {
+#sourcespage h3 {
+    font-family: "Silkscreen"; 
+    font-size: 24px;
+    color: #ED9999; 
+    padding: 24px;
+}
+
+#overlay p, #sourcespage p {
     font-family: "Afacad";
     font-size: 20px;
     padding: 0 24px 24px 24px;
 }
 
-.return {
+#sourcespage a {
+    color: #ED9999;
+}
+
+#overlayreturn, #sourcesreturn {
     background-color: #FFD5D5; 
     color: white;
     font-family: "Silkscreen";
@@ -126,7 +163,7 @@ header {
     padding: 24px;
 }
 
-#game h2 {
+header h2 {
     font-family: "Jersey 15";
     font-size: 48px;
     color: white;
@@ -156,7 +193,7 @@ header {
     text-align: center;
 }
 
-h3 {
+#game h3 {
     font-family: "Silkscreen";
     font-size: 36px; 
     color: #ED9999; 
@@ -188,6 +225,31 @@ h3 {
     margin: 24px auto;
 }
 
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 84px;
+}
+
+footer p {
+    font-family: "Silkscreen";
+    font-size: 18px;
+    color: #ED9999; 
+}
+
+footer button {
+    background-color: transparent;
+    border: none;
+    font-family: "Silkscreen";
+    font-size: 18px;
+    color: #ED9999; 
+    padding: 16px;
+    text-decoration: underline;
+}
+
 @media only screen and (min-width: 1200px) {
 
     /* START SCREEN */
@@ -203,9 +265,13 @@ h3 {
         font-size: 124px;
     }
 
+    #startanimation img {
+        max-width: 25%;
+        padding: 0;
+    }
+
     #start #startbutton {
         font-size: 48px;
-        padding: 20px;
     }
 
     #overlay aside {
@@ -240,4 +306,13 @@ h3 {
         font-size: 48px;
     }
     
+    /* FOOTER */
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    footer p {
+        padding: 16px;
+    }
 }
