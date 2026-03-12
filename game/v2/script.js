@@ -72,47 +72,25 @@
         document.querySelector("#game").classList.remove("hidden");
 
         gameData.index = Math.round(Math.random()); 
-
-        setUpTurn(); 
     }); 
 
-    function setUpTurn() {
-        document.querySelector("#roll").addEventListener("click", function() {
+    const rollButton = document.querySelector("#roll"); 
+    rollButton.addEventListener("click", function() {
             soundfx.play(); 
             throwDice(); 
-        }); 
-    }; 
+    }); 
+    
 
     const diceArea = document.querySelector("#dice"); 
-    function throwDice() {
 
-        //dice roll 
-        gameData.roll1 = Math.floor(Math.random() * 6) + 1; 
-        gameData.roll2 = Math.floor(Math.random() * 6) + 1; 
+    function switchPlayer() {
+        gameData.index ? (gameData.index = 0) : (gameData.index = 1); 
+    }
 
-        diceArea.innerHTML = `<p>Roll the dice for ${gameData.players[gameData.index]}!</p>`; 
-        diceArea.innerHTML += `<div id="diceimg"><img src="images/${gameData.dice[gameData.roll1 - 1]}"> <img src="images/${gameData.dice[gameData.roll2 - 1]}"></div>`; 
-
-        gameData.rollSum = gameData.roll1 + gameData.roll2; 
-
-        //roll conditions 
-        if (gameData.rollSum === 2) {
-            diceArea.innerHTML += "Snake eyes! Your opponent's critter is healed to full health!"; 
-            gameData.index ?  (gameData.index = 0) : (gameData.index = 1); 
-            setTimeout(setUpTurn, 2000); 
-        } else if (gameData.roll1 === 1 || gameData.roll2 === 1) {
-            diceArea.innerHTML += `<p>Sorry, one of your rolls was a 1! Switching to ${gameData.players[gameData.index]}...</p>`; 
-            gameData.index ? (gameData.index = 0) : (gameData.index = 1); 
-            setTimeout(setUpTurn, 2000); 
-        } else {
-            gameData.score[gameData.index] = gameData.score[gameData.index] - gameData.rollSum; 
-        }; 
-        
-        showCurrentScore(); 
-        checkWinningCondition(); 
-
+    function showCurrentScore() {
+        document.querySelector("#score").innerHTML = `<h3>HP: ${gameData.score[1]}</h3><h3>HP: ${gameData.score[0]}</h3>`; 
     }; 
-    
+
     function checkWinningCondition() {
         if (gameData.score[gameData.index] < gameData.gameEnd) {
             document.querySelector("#game").className = "hidden"; 
@@ -126,12 +104,63 @@
         }; 
     }; 
 
-    function showCurrentScore() {
-        document.querySelector("#score").innerHTML = `<h3>HP: ${gameData.score[0]}</h3><h3>HP: ${gameData.score[1]}</h3>`; 
+    function throwDice() {
+
+        //dice roll 
+        gameData.roll1 = Math.floor(Math.random() * 6) + 1; 
+        gameData.roll2 = Math.floor(Math.random() * 6) + 1; 
+
+        diceArea.innerHTML = `<p>${gameData.players[gameData.index]} rolled...</p>`; 
+        diceArea.innerHTML += `
+        <div id="diceimg">
+            <img src="images/${gameData.dice[gameData.roll1 - 1]}">
+            <img src="images/${gameData.dice[gameData.roll2 - 1]}">
+        </div>`; 
+
+        gameData.rollSum = gameData.roll1 + gameData.roll2; 
+
+        //roll conditions 
+        if (gameData.rollSum === 2) {
+
+            diceArea.innerHTML += `<p>Snake eyes! Your opponent's critter is healed to full health!</p>`; 
+            switchPlayer(); 
+            gameData.score[gameData.index] = 100; 
+            showCurrentScore();
+
+        } else if (gameData.roll1 === 1 || gameData.roll2 === 1) {
+            
+            diceArea.innerHTML += `<p>Sorry, one of your rolls was a 1! Your turn is negated... 0 dmg! </p>`; 
+            showCurrentScore(); 
+            switchPlayer(); 
+
+        } else {
+            gameData.score[gameData.index] = gameData.score[gameData.index] - gameData.rollSum; 
+            diceArea.innerHTML += `<p>-${gameData.rollSum} HP!</p>`
+            showCurrentScore(); 
+            checkWinningCondition(); 
+            switchPlayer(); 
+        }; 
+
+        //image change 
+        if (gameData.score[1] > 50) {
+            document.querySelector("#dogimg").setAttribute("src", "images/idledog.png"); 
+        } else if (gameData.score[0] < 50) {
+            document.querySelector("#dogimg").setAttribute("src", "images/dogdmg.png"); 
+        }; 
+
+        if (gameData.score[0] > 50) {
+            document.querySelector("#catimg").setAttribute("src", "images/idlecat.png"); 
+        } else if (gameData.score[1] < 50) {
+            document.querySelector("#catimg").setAttribute("src", "images/catdmg.png"); 
+        }; 
     }; 
+    
+    
+
+    
 
     document.querySelector("#again").addEventListener("click", function() {
         location.reload(); 
-    }); 
+    });  
 
 }) (); 

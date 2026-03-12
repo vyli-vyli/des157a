@@ -14,6 +14,11 @@ ul {
  list-style-type: none;
 }
 
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
 /* end css reset */ 
 
 /* body {
@@ -211,12 +216,39 @@ header h2 {
     margin: 24px auto;
 }
 
+/*  SCORE */
+#score {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 24px;
+}
+
+#score h3 {
+    font-size: 24px;
+}
+
 /* DICE AREA */
 #diceimg {
     display: flex;
+    
+}
+
+#dice p {
+    font-family: "Silkscreen";
+    font-size: 16px;
+    color: #ED9999; 
+    text-align: center;
+    padding: 24px;
 }
 
 /* WIN SCREEN */
+
+#win h3 {
+    font-family: "Silkscreen";
+    font-size: 48px;
+    color: #ED9999; 
+    text-align: center;
+}
 
 #again {
     font-family: "Silkscreen";
@@ -236,7 +268,6 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 84px;
 }
 
 footer p {
@@ -305,6 +336,14 @@ footer button {
         font-size: 48px;
         padding: 20px;
     }
+
+    /* SCORE */
+    #score h3 {
+        font-size: 36px;
+        margin: 24px;
+    }
+
+    /* DICE */
 
     /* WIN SCREEN */
     #again {
