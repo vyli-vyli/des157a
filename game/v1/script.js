@@ -80,30 +80,8 @@
             soundfx.play(); 
             throwDice(); 
     }); 
-    
 
     const diceArea = document.querySelector("#dice"); 
-
-    function switchPlayer() {
-        gameData.index ? (gameData.index = 0) : (gameData.index = 1); 
-    }
-
-    function showCurrentScore() {
-        document.querySelector("#score").innerHTML = `<h3>HP: ${gameData.score[1]}</h3><h3>HP: ${gameData.score[0]}</h3>`; 
-    }; 
-
-    function checkWinningCondition() {
-        if (gameData.score[gameData.index] < gameData.gameEnd) {
-            document.querySelector("#game").className = "hidden"; 
-            document.querySelector("#win").classList.remove("hidden");
-
-            document.querySelector("#winner").innerHTML = 
-            `<h3>${gameData.players[gameData.index]} wins!</h3>`; 
-
-        } else {
-            showCurrentScore(); 
-        }; 
-    }; 
 
     function throwDice() {
 
@@ -142,20 +120,28 @@
             switchPlayer(); 
         }; 
 
-        //image change 
-        if (gameData.score[1] > 50) {
-            document.querySelector("#dogimg").setAttribute("src", "images/idledog.png"); 
-        } else if (gameData.score[1] < 50) {
-            document.querySelector("#dogimg").setAttribute("src", "images/dogdmg.png"); 
-        }; 
+    }; 
 
-        if (gameData.score[0] > 50) {
-            document.querySelector("#catimg").setAttribute("src", "images/idlecat.png"); 
-        } else if (gameData.score[0] < 50) {
-            document.querySelector("#catimg").setAttribute("src", "images/catdmg.png"); 
+    function switchPlayer() {
+        gameData.index ? (gameData.index = 0) : (gameData.index = 1); 
+    }
+
+    function showCurrentScore() {
+        document.querySelector("#score").innerHTML = `<h3>HP: ${gameData.score[1]}</h3><h3>HP: ${gameData.score[0]}</h3>`; 
+    }; 
+
+    function checkWinningCondition() {
+        if (gameData.score[gameData.index] < gameData.gameEnd) {
+            document.querySelector("#game").className = "hidden"; 
+            document.querySelector("#win").classList.remove("hidden");
+
+            document.querySelector("#winner").innerHTML = 
+            `<h3>${gameData.players[gameData.index]} wins!</h3>`; 
+
+        } else {
+            showCurrentScore(); 
         }; 
     }; 
-    
     document.querySelector("#again").addEventListener("click", function() {
         location.reload(); 
     });  

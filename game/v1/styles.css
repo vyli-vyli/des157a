@@ -14,69 +14,295 @@ ul {
  list-style-type: none;
 }
 
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
 /* end css reset */ 
 
-html {
-    min-height: 100%;
-    background: linear-gradient(180deg, rgb(255, 201, 53, 1) 50%, rgb(255, 249, 208, 1) 100%);
-    background-repeat: no-repeat;
+.hidden {
+    display: none;
+    pointer-events: none;
 }
 
-body {
-    background: transparent;
+/* START SCREEN  */
+
+.buttons {
+    display: flex;
 }
+
+.help, .sound {
+    border: none;
+    background-color: transparent;
+    padding: 24px;
+}
+
+.buttons img {
+    max-width: 75%;
+}
+
+#start .sound, #win .sound {
+    margin-left: auto;
+}
+
+#start h1 {
+    font-family: "Jersey 15";
+    font-size: 96px;
+    text-align: center;
+    color: white; 
+    -webkit-text-stroke: #ED9999 15px; 
+    paint-order: stroke fill;
+}
+
+#startanimation {
+    display: flex;
+    margin: auto;
+}
+
+#startanimation img {
+    width: 50%;
+    padding: 24px;
+}
+
+#startdog {
+    animation: sticker 2s steps(1, end) infinite;
+}
+
+#startcat {
+    animation: sticker 2s steps(1, end) infinite;
+}
+
+@keyframes sticker {
+    0% {
+        transform: rotate(10deg); 
+    }
+    50% {
+        transform: rotate(-10deg); 
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+#start #startbutton {
+    font-family: "Silkscreen";
+    font-size: 36px;
+    border: none; 
+    border-radius: 25px;
+    background-color: #FFD5D5; 
+    color: white;
+    padding: 16px;
+    
+    display: block;
+    margin: auto;
+    margin-top: 64px;
+}
+
+#overlay, #sourcespage {
+    background-color: rgb(200, 200, 200, 0.5);
+    width: 100vw; 
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+}
+
+#overlay aside, #sourcespage aside {
+    background-color: white;
+    border: solid #FFD5D5 5px;
+    border-radius: 25px;
+    width: 75%;
+    position: absolute;
+    z-index: 10;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#overlay h2 {
+    font-family: "Jersey 15"; 
+    font-size: 36px;
+    text-align: center;
+    padding: 12px;
+}
+
+#sourcespage h3 {
+    font-family: "Silkscreen"; 
+    font-size: 24px;
+    color: #ED9999; 
+    padding: 24px;
+}
+
+#overlay p, #sourcespage p {
+    font-family: "Afacad";
+    font-size: 20px;
+    padding: 0 24px 24px 24px;
+}
+
+#sourcespage a {
+    color: #ED9999;
+}
+
+#overlayreturn, #sourcesreturn {
+    background-color: #FFD5D5; 
+    color: white;
+    font-family: "Silkscreen";
+    font-size: 24px;
+    border: none; 
+    border-radius: 25px;
+    padding: 12px;
+    
+    display: flex; 
+    margin: auto;
+    margin-bottom: 24px;
+}
+
+/* MAIN GAME */
 
 header {
+    background-color: #FFD5D5;
+    padding: 24px;
+}
+
+header h2 {
+    font-family: "Jersey 15";
+    font-size: 48px;
+    color: white;
+    -webkit-text-stroke: #ED9999 15px; 
+    paint-order: stroke fill;
     text-align: center;
 }
 
-h1 {
-    font-family: "Bagel Fat One";
-    font-size: 32px;
-    color: #DD841E;
-    padding: 24px;
-
+.quit {
+    font-family: "Silkscreen";
+    font-size: 24px;
+    background-color: #FFD5D5; 
+    color: white; 
+    border: none; 
+    border-radius: 15px;
+    padding: 4px 12px;
+    margin: 24px; 
 }
 
-img {
-    max-width: 75%;
-    border: 5px solid #DD841E; 
-    border-radius: 10px;
+#game .buttons {
+    justify-content: space-evenly;
+}
+
+#art {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+#game h3 {
+    font-family: "Silkscreen";
+    font-size: 36px; 
+    color: #ED9999; 
+}
+
+#roll {
+    font-family: "Silkscreen";
+    font-size: 48px;
+    background-color: #FFD5D5; 
+    color: white; 
+    border: none; 
+    border-radius: 20px;
+    padding: 12px;
+    display: block;
     margin: 24px auto;
 }
 
-footer {
-    font-family: "Afacad";
-    font-size: 16px;
-    color: #DD841E;
-    padding: 12px;
-    text-align: center;
-}
-
-footer a {
-    color: #DD841E;
-}
-
-@media only screen and (min-width: 650px) {
-    
-    body {
-    min-height: 100%;
-    }
-
-    h1 {
-    font-size: 72px;
-    padding: 48px;
-    }
-
-    main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+/*  SCORE */
+#score {
+    display: flex;
     justify-content: space-evenly;
-    position: relative; 
+    padding: 24px;
+}
+
+#score h3 {
+    font-size: 24px;
+}
+
+/* WIN SCREEN */
+
+#win h3 {
+    font-family: "Silkscreen";
+    font-size: 48px;
+    color: #ED9999; 
+    text-align: center;
+    padding: 24px;
+}
+
+#again {
+    font-family: "Silkscreen";
+    font-size: 36px;
+    background-color: #FFD5D5; 
+    color: white; 
+    border: none; 
+    border-radius: 20px;
+    padding: 12px;
+    display: block;
+    margin: 24px auto;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    /* START SCREEN */
+    .help, .sound {
+        padding: 36px;
     }
 
-    footer {
-    margin: auto;
+    .buttons img {
+        max-width: 100%;
     }
 
+    #start h1 {
+        font-size: 124px;
+    }
+
+    #startanimation img {
+        max-width: 25%;
+        padding: 0;
+    }
+
+    #start #startbutton {
+        font-size: 48px;
+    }
+
+    #overlay aside {
+        width: 50%;
+    }
+
+    #overlay p {
+        padding: 0 36px 36px 36px; 
+    }
+
+    /* MAIN GAME */
+    #game .buttons {
+        justify-content: left;
+    }
+
+    .quit {
+        max-height: 75px;
+        font-size: 36px; 
+        border-radius: 20px;
+        margin-top: 36px;
+        margin-right: 35px;
+        margin-left: auto;
+    }
+
+    #roll {
+        font-size: 48px;
+        padding: 20px;
+    }
+
+    /* WIN SCREEN */
+    #win h3 {
+        padding: 48px;
+    }
+
+    #again {
+        font-size: 48px;
+    }
+    
 }

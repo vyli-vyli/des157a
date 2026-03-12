@@ -1,0 +1,82 @@
+h1, h2, h3, p, ul {
+ margin: 0;
+ padding: 0;
+}
+
+img {
+ display: block;
+ max-width: 100%;
+ height: auto;
+ margin: auto;
+}
+
+ul {
+ list-style-type: none;
+}
+
+/* end css reset */ 
+
+html {
+    min-height: 100%;
+    background: linear-gradient(180deg, rgb(255, 201, 53, 1) 50%, rgb(255, 249, 208, 1) 100%);
+    background-repeat: no-repeat;
+}
+
+body {
+    background: transparent;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-family: "Bagel Fat One";
+    font-size: 32px;
+    color: #DD841E;
+    padding: 24px;
+
+}
+
+img {
+    max-width: 75%;
+    border: 5px solid #DD841E; 
+    border-radius: 10px;
+    margin: 24px auto;
+}
+
+footer {
+    font-family: "Afacad";
+    font-size: 16px;
+    color: #DD841E;
+    padding: 12px;
+    text-align: center;
+}
+
+footer a {
+    color: #DD841E;
+}
+
+@media only screen and (min-width: 650px) {
+    
+    body {
+    min-height: 100%;
+    }
+
+    h1 {
+    font-size: 72px;
+    padding: 48px;
+    }
+
+    main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    position: relative; 
+    }
+
+    footer {
+    margin: auto;
+    }
+
+}
